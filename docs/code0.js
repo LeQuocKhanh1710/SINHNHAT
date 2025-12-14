@@ -55,6 +55,9 @@ gdjs.MainGameCode.GDDialogBoxObjects3= [];
 gdjs.MainGameCode.GDStoryTextObjects1= [];
 gdjs.MainGameCode.GDStoryTextObjects2= [];
 gdjs.MainGameCode.GDStoryTextObjects3= [];
+gdjs.MainGameCode.GDBossHPTextObjects1= [];
+gdjs.MainGameCode.GDBossHPTextObjects2= [];
+gdjs.MainGameCode.GDBossHPTextObjects3= [];
 
 
 gdjs.MainGameCode.eventsList0 = function(runtimeScene) {
@@ -159,6 +162,22 @@ let isConditionTrue_0 = false;
 
 };gdjs.MainGameCode.mapOfGDgdjs_9546MainGameCode_9546GDGoldShipObjects1Objects = Hashtable.newFrom({"GoldShip": gdjs.MainGameCode.GDGoldShipObjects1});
 gdjs.MainGameCode.eventsList2 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("BossHPText"), gdjs.MainGameCode.GDBossHPTextObjects1);
+gdjs.copyArray(runtimeScene.getObjects("GoldShip2"), gdjs.MainGameCode.GDGoldShip2Objects1);
+{for(var i = 0, len = gdjs.MainGameCode.GDBossHPTextObjects1.length ;i < len;++i) {
+    gdjs.MainGameCode.GDBossHPTextObjects1[i].setBBText("HP: " + gdjs.evtTools.common.toString((gdjs.RuntimeObject.getVariableNumber(((gdjs.MainGameCode.GDGoldShip2Objects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.MainGameCode.GDGoldShip2Objects1[0].getVariables()).getFromIndex(1)))));
+}
+}
+}
+
+}
+
 
 {
 
@@ -295,7 +314,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "timer") >= 0.2;
 if (isConditionTrue_0) {
-{runtimeScene.getScene().getVariables().getFromIndex(0).add(5);
+{runtimeScene.getScene().getVariables().getFromIndex(0).add(10);
 }
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "timer");
 }
@@ -1225,7 +1244,7 @@ gdjs.copyArray(runtimeScene.getObjects("GoldShip2"), gdjs.MainGameCode.GDGoldShi
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 for (var i = 0, k = 0, l = gdjs.MainGameCode.GDGoldShip2Objects1.length;i<l;++i) {
-    if ( gdjs.MainGameCode.GDGoldShip2Objects1[i].getTimerElapsedTimeInSecondsOrNaN("Stun") >= 1 ) {
+    if ( gdjs.MainGameCode.GDGoldShip2Objects1[i].getTimerElapsedTimeInSecondsOrNaN("Stun") >= 3 ) {
         isConditionTrue_0 = true;
         gdjs.MainGameCode.GDGoldShip2Objects1[k] = gdjs.MainGameCode.GDGoldShip2Objects1[i];
         ++k;
@@ -1383,6 +1402,9 @@ gdjs.MainGameCode.GDDialogBoxObjects3.length = 0;
 gdjs.MainGameCode.GDStoryTextObjects1.length = 0;
 gdjs.MainGameCode.GDStoryTextObjects2.length = 0;
 gdjs.MainGameCode.GDStoryTextObjects3.length = 0;
+gdjs.MainGameCode.GDBossHPTextObjects1.length = 0;
+gdjs.MainGameCode.GDBossHPTextObjects2.length = 0;
+gdjs.MainGameCode.GDBossHPTextObjects3.length = 0;
 
 gdjs.MainGameCode.eventsList2(runtimeScene);
 gdjs.MainGameCode.GDGroundObjects1.length = 0;
@@ -1439,6 +1461,9 @@ gdjs.MainGameCode.GDDialogBoxObjects3.length = 0;
 gdjs.MainGameCode.GDStoryTextObjects1.length = 0;
 gdjs.MainGameCode.GDStoryTextObjects2.length = 0;
 gdjs.MainGameCode.GDStoryTextObjects3.length = 0;
+gdjs.MainGameCode.GDBossHPTextObjects1.length = 0;
+gdjs.MainGameCode.GDBossHPTextObjects2.length = 0;
+gdjs.MainGameCode.GDBossHPTextObjects3.length = 0;
 
 
 return;
